@@ -3,7 +3,7 @@
 // In Floyd Warshall’s algorithm, we need to check every possible path going via each possible node.
 // And after checking every possible path, we will figure out the shortest path(a kind of brute force
 // approach to find the shortest path).
-// Formula : matrix[i][j] = min(matrix[i][j], matrix[i ][k]+matrix[k][j]),
+// Formula : matrix[i][j] = min(matrix[i][j], matrix[i][k] + matrix[k][j]),
 // where i = source node, j = destination node, and k = the node via which we are reaching from i to j.
 // Here we will calculate dist[i][j] for every possible node k (k = 0, 1….V, where V = no. of nodes), and
 // will select the minimum value as our result.
@@ -16,7 +16,7 @@
 // Adjacency Matrix: The adjacency matrix should store the edge weights for the given edges and the rest
 // of the cells must be initialized with infinity().
 
-/* Steps to implement the algorothm :
+/* Steps to implement the algorithm :
 1) After having set the adjacency matrix accordingly, we will run a loop from 0 to V-1(V = no. of vertices). In
 the kth iteration, this loop will help us to check the path via node k for every possible pair of nodes.
 Basically, this loop will change the value of k in the formula.
