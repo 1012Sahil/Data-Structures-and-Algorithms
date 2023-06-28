@@ -42,7 +42,9 @@ int e_isBalanced(Node *root)
     int rh = e_isBalanced(root->right);
     if (rh == -1)
         return -1;
-
+        // check if difference of height of left and right subtree of every node is <= 1 or not
+        // we can do this in O(N) by making sure that we return a positive height only if subtree is 
+        // balanced, else return -1 to indicate unbalanced tree!
     if (abs(lh - rh) > 1)
         return -1;
     else
